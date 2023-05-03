@@ -59,6 +59,12 @@
     <Compile Include="frmMedico.Designer.cs">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmEspecialidad.resx">
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedico.resx">
       <DependentUpon>frmMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

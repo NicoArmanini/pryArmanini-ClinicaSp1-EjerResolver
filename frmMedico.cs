@@ -16,5 +16,18 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         {
             InitializeComponent();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMedico_Load(object sender, EventArgs e)
+        {
+            //buscar las especialidad
+            clsEspecialidad objEspecialidad = new clsEspecialidad();
+
+            objEspecialidad.ListarEspecialidad(cboEspecialidad);
+        }
     }
 }

@@ -16,5 +16,23 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         {
             InitializeComponent();
         }
+
+        private void especialidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEspecialidad ventanaEspecialidad = new frmEspecialidad();
+            ventanaEspecialidad.ShowDialog();
+        }
+
+        private void médicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMedico ventanaMedico = new frmMedico();
+            ventanaMedico.ShowDialog();
+        }
+
+        private void porEspecialidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListado ventanaListado = new frmListado();
+            ventanaListado.ShowDialog();
+        }
     }
 }
