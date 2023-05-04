@@ -19,7 +19,9 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            clsEspecialidad objMedico = new clsEspecialidad();
 
+            
         }
 
         private void frmMedico_Load(object sender, EventArgs e)

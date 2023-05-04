@@ -25,5 +25,10 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -41,66 +41,74 @@
             // cboEspecialidad
             // 
             this.cboEspecialidad.FormattingEnabled = true;
-            this.cboEspecialidad.Location = new System.Drawing.Point(123, 98);
+            this.cboEspecialidad.Location = new System.Drawing.Point(164, 121);
+            this.cboEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboEspecialidad.Name = "cboEspecialidad";
-            this.cboEspecialidad.Size = new System.Drawing.Size(121, 21);
+            this.cboEspecialidad.Size = new System.Drawing.Size(160, 24);
             this.cboEspecialidad.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 106);
+            this.label3.Location = new System.Drawing.Point(56, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 20;
             this.label3.Text = "Especialidad";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 58);
+            this.label2.Location = new System.Drawing.Point(56, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Nombre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 24);
+            this.label1.Location = new System.Drawing.Point(56, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Matricula";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(123, 58);
+            this.txtNombre.Location = new System.Drawing.Point(164, 71);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtNombre.Size = new System.Drawing.Size(160, 22);
             this.txtNombre.TabIndex = 17;
             // 
             // txtMatricula
             // 
-            this.txtMatricula.Location = new System.Drawing.Point(123, 17);
+            this.txtMatricula.Location = new System.Drawing.Point(164, 21);
+            this.txtMatricula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(39, 20);
+            this.txtMatricula.Size = new System.Drawing.Size(51, 22);
             this.txtMatricula.TabIndex = 16;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(76, 156);
+            this.btnCancelar.Location = new System.Drawing.Point(101, 192);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(169, 156);
+            this.btnRegistrar.Location = new System.Drawing.Point(225, 192);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(100, 28);
             this.btnRegistrar.TabIndex = 14;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -108,9 +116,10 @@
             // 
             // frmMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 196);
+            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.ClientSize = new System.Drawing.Size(443, 241);
             this.Controls.Add(this.cboEspecialidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -119,6 +128,7 @@
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistrar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMedico";
             this.Text = "Medico";
             this.Load += new System.EventHandler(this.frmMedico_Load);

@@ -20,10 +20,10 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
             nombre = txtNombre;
 
             //validaciones - chequear que el còdigo no estè repetido
-            ValidarCodigo();
+            //ValidarCodigo();
 
             //si el código està repetido, aviso, caso contrario grabar
-            StreamWriter grabarArchivo = new StreamWriter("Especialidad", true);
+            StreamWriter grabarArchivo = new StreamWriter("Especialidad.txt", true);
 
             grabarArchivo.WriteLine(codigo + ", " + nombre);
 
@@ -37,7 +37,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
             string linea = "";
             int codigoAvalidar = 0;
 
-            StreamReader lectorArchivo = new StreamReader("Especialidad");
+            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
 
             while (lectorArchivo.EndOfStream == false)
             {
@@ -48,6 +48,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
                 if (codigoAvalidar == codigo)
                 {
                     //decirle que el còdigo està repetido
+                    MessageBox.Show("El codigo esta repetido");
                 }
 
             }
@@ -55,7 +56,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 
         public void ListarEspecialidad()
         {
-            StreamReader lectorArchivo = new StreamReader("Especialidad");
+            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
             while (lectorArchivo.EndOfStream == false)
             {
                 lectorArchivo.ReadLine();
@@ -64,7 +65,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 
         public void ListarEspecialidad(ComboBox listaDesplegable)
         {
-            StreamReader lectorArchivo = new StreamReader("Especialidad");
+            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
             while (lectorArchivo.EndOfStream == false)
             {
                 listaDesplegable.Items.Add(lectorArchivo.ReadLine());

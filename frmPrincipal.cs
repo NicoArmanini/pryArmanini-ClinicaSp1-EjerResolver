@@ -34,5 +34,10 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
             frmListado ventanaListado = new frmListado();
             ventanaListado.ShowDialog();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
