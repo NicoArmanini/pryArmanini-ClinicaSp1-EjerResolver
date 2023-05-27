@@ -18,7 +18,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
             {
                 StreamWriter sw = new StreamWriter(NombreArchivo, true);
 
-                sw.WriteLine(Especialidad.Nombre + "," + Especialidad.NumeroID);
+                sw.WriteLine(Especialidad.Nombre + "," + Especialidad.Codigo);
                 sw.Close();
                 sw.Dispose();
                 resultado = true;
@@ -44,7 +44,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 
         public List<clsEspecialidad> ListarEspecialidad()
         {
-            List<clsEspecialidad> listEspecialidad = new List<clsEspecialidad>();
+            List<clsEspecialidad> ListaEspecialidad = new List<clsEspecialidad>();
             string Linea;
             if (NombreArchivo != "" && File.Exists(NombreArchivo))
             {
@@ -53,14 +53,14 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
                 {
                     Linea = sw.ReadLine();
                     clsEspecialidad NuevaEspecialidad = new clsEspecialidad();
-                    NuevaEspecialidad.Nombre = Linea.Split(',')[0];
-                    NuevaEspecialidad.NumeroID = Linea.Split(',')[1];
-                    listEspecialidad.Add(NuevaEspecialidad);
+                    NuevaEspecialidad.Codigo = Linea.Split(',')[0];
+                    NuevaEspecialidad.Nombre = Linea.Split(',')[1];
+                    ListaEspecialidad.Add(NuevaEspecialidad);
                 }
                 sw.Close();
                 sw.Dispose();
             }
-            return listEspecialidad;
+            return ListaEspecialidad;
         }
 
         public List<clsMedico> ListarMedicos()
@@ -85,31 +85,6 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
             return listMedico;
         }
 
-        public bool BuscarNumeroEspecialidad(string Numero)
-        {
-            bool resultado = false;
-            string Linea;
-            string numLeido;
-
-            if (NombreArchivo != "" && File.Exists(NombreArchivo))
-            {
-                StreamReader sw = new StreamReader(NombreArchivo);
-                while (sw.EndOfStream == false)
-                {
-                    Linea = sw.ReadLine();
-                    numLeido = Linea.Split(',')[1];
-                    if (Numero == numLeido)
-                    {
-                        resultado = true;
-                        break;
-                    }
-                }
-                sw.Close();
-                sw.Dispose();
-            }
-            return resultado;
-        }
-
         public bool BuscarNombreEspecialidad(string Nombre)
         {
             bool resultado = false;
@@ -124,6 +99,31 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
                     Linea = sw.ReadLine();
                     nombreLeido = Linea.Split(',')[0];
                     if (Nombre == nombreLeido)
+                    {
+                        resultado = true;
+                        break;
+                    }
+                }
+                sw.Close();
+                sw.Dispose();
+            }
+            return resultado;
+        }
+
+        public bool BuscarNumeroEspecialidad(string Numero)
+        {
+            bool resultado = false;
+            string Linea;
+            string numLeido;
+
+            if (NombreArchivo != "" && File.Exists(NombreArchivo))
+            {
+                StreamReader sw = new StreamReader(NombreArchivo);
+                while (sw.EndOfStream == false)
+                {
+                    Linea = sw.ReadLine();
+                    numLeido = Linea.Split(',')[1];
+                    if (Numero == numLeido)
                     {
                         resultado = true;
                         break;

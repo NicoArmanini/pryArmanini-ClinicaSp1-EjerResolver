@@ -52,9 +52,10 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 34);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // mrcConsulta
             // 
@@ -71,7 +72,7 @@
             this.mrcConsulta.Name = "mrcConsulta";
             this.mrcConsulta.Padding = new System.Windows.Forms.Padding(4);
             this.mrcConsulta.Size = new System.Drawing.Size(607, 340);
-            this.mrcConsulta.TabIndex = 12;
+            this.mrcConsulta.TabIndex = 0;
             this.mrcConsulta.TabStop = false;
             this.mrcConsulta.Text = "Consulta Médico";
             // 
@@ -81,9 +82,10 @@
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(100, 26);
-            this.btnActualizar.TabIndex = 7;
+            this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "&Reiniciar ";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnLimpiar
             // 
@@ -91,9 +93,10 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
-            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "&Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // lblSeleccionar
             // 
@@ -114,6 +117,7 @@
             this.cmbEspecialidad.Name = "cmbEspecialidad";
             this.cmbEspecialidad.Size = new System.Drawing.Size(160, 24);
             this.cmbEspecialidad.TabIndex = 1;
+            this.cmbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbEspecialidad_SelectedIndexChanged);
             // 
             // lblMedicos
             // 
@@ -131,9 +135,10 @@
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(100, 28);
-            this.btnConsultar.TabIndex = 5;
+            this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "&Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblEspecialidad
             // 
@@ -151,14 +156,14 @@
             this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvConsulta.Location = new System.Drawing.Point(31, 118);
+            this.dgvConsulta.Location = new System.Drawing.Point(8, 118);
             this.dgvConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.RowHeadersWidth = 51;
-            this.dgvConsulta.Size = new System.Drawing.Size(404, 185);
-            this.dgvConsulta.TabIndex = 2;
+            this.dgvConsulta.Size = new System.Drawing.Size(451, 185);
+            this.dgvConsulta.TabIndex = 3;
             // 
             // Column1
             // 
@@ -182,9 +187,10 @@
             this.btnRegistroMedico.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroMedico.Name = "btnRegistroMedico";
             this.btnRegistroMedico.Size = new System.Drawing.Size(135, 43);
-            this.btnRegistroMedico.TabIndex = 11;
+            this.btnRegistroMedico.TabIndex = 2;
             this.btnRegistroMedico.Text = "&Registrar Médico";
             this.btnRegistroMedico.UseVisualStyleBackColor = true;
+            this.btnRegistroMedico.Click += new System.EventHandler(this.btnRegistroMedico_Click);
             // 
             // btnRegistroEspecialidad
             // 
@@ -192,9 +198,10 @@
             this.btnRegistroEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroEspecialidad.Name = "btnRegistroEspecialidad";
             this.btnRegistroEspecialidad.Size = new System.Drawing.Size(135, 43);
-            this.btnRegistroEspecialidad.TabIndex = 10;
+            this.btnRegistroEspecialidad.TabIndex = 1;
             this.btnRegistroEspecialidad.Text = "&Registrar Especialidad";
             this.btnRegistroEspecialidad.UseVisualStyleBackColor = true;
+            this.btnRegistroEspecialidad.Click += new System.EventHandler(this.btnRegistroEspecialidad_Click);
             // 
             // frmListado
             // 
@@ -209,6 +216,7 @@
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Medico por Especialidad";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.mrcConsulta.ResumeLayout(false);
             this.mrcConsulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();

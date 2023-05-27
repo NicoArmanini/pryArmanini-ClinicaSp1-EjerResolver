@@ -16,7 +16,7 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEspecialidad());
+            Application.Run(new frmListado());
         }
     }
 }

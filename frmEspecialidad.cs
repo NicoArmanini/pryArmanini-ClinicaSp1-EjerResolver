@@ -24,8 +24,8 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         {
             clsEspecialidad NuevaEspecialidad = new clsEspecialidad();
 
-            NuevaEspecialidad.Nombre = txtNombre.Text;
-            NuevaEspecialidad.NumeroID = txtCodigo.Text;
+            NuevaEspecialidad.Nombre = txtCodigo.Text;
+            NuevaEspecialidad.Codigo = txtNombre.Text;
 
             return NuevaEspecialidad;
         }
@@ -34,13 +34,13 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         {
             if (ValidarDatos())
             {
-                clsEspecialidad NuevaEspecialidad = ();
+                clsEspecialidad NuevaEspecialidad = CrearEspecialidad();
                 clsArchivo Especialidad = new clsArchivo();
                 Especialidad.NombreArchivo = NombreArchivoEsp;
                 Especialidad.GrabarEspecialidad(NuevaEspecialidad);
 
-                txtNombre.Text = "";
                 txtCodigo.Text = "";
+                txtNombre.Text = "";
                 MessageBox.Show("¡Registro exitoso!", "Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -54,12 +54,13 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
         private bool ValidarDatos()
         {
             bool resultado = false;
-            if (txtNombre.Text != "")
+            if (txtCodigo.Text != "")
             {
-                if (txtCodigo.Text != "")
+                if (txtNombre.Text != "")
                 {
                     clsArchivo Especialidad = new clsArchivo();
                     Especialidad.NombreArchivo = NombreArchivoEsp;
+
                     if (Especialidad.BuscarNumeroEspecialidad(txtCodigo.Text) == false)
                     {
                         if (Especialidad.BuscarNombreEspecialidad(txtNombre.Text) == false)
