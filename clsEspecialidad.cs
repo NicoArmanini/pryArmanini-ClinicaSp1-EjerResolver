@@ -11,66 +11,72 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 {
     internal class clsEspecialidad
     {
-        int codigo { get; set; }
-        string nombre { get; set; }
 
-        public void RegistrarEspecialidad(int txtCodigo, string txtNombre)
-        {
-            codigo = txtCodigo;
-            nombre = txtNombre;
-
-            //validaciones - chequear que el còdigo no estè repetido
-            //ValidarCodigo();
-
-            //si el código està repetido, aviso, caso contrario grabar
-            StreamWriter grabarArchivo = new StreamWriter("Especialidad.txt", true);
-
-            grabarArchivo.WriteLine(codigo + ", " + nombre);
-
-            grabarArchivo.Close();
+        public string Nombre { get; set; }
+        public string NumeroID { get; set; }
 
 
-        }
 
-        private void ValidarCodigo()
-        {
-            string linea = "";
-            int codigoAvalidar = 0;
+        //int codigo { get; set; }
+        //string nombre { get; set; }
 
-            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
+        //public void RegistrarEspecialidad(int txtCodigo, string txtNombre)
+        //{
+        //    codigo = txtCodigo;
+        //    nombre = txtNombre;
 
-            while (lectorArchivo.EndOfStream == false)
-            {
-                linea = lectorArchivo.ReadLine();
+        //    //validaciones - chequear que el còdigo no estè repetido
+        //    //ValidarCodigo();
 
-                codigoAvalidar = Convert.ToInt32(linea.Split(',')[0]);
+        //    //si el código està repetido, aviso, caso contrario grabar
+        //    StreamWriter grabarArchivo = new StreamWriter("Especialidad.txt", true);
 
-                if (codigoAvalidar == codigo)
-                {
-                    //decirle que el còdigo està repetido
-                    MessageBox.Show("El codigo esta repetido");
-                }
+        //    grabarArchivo.WriteLine(codigo + ", " + nombre);
 
-            }
-        }
+        //    grabarArchivo.Close();
 
-        public void ListarEspecialidad()
-        {
-            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
-            while (lectorArchivo.EndOfStream == false)
-            {
-                lectorArchivo.ReadLine();
-            }
-        }
 
-        public void ListarEspecialidad(ComboBox listaDesplegable)
-        {
-            StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
-            while (lectorArchivo.EndOfStream == false)
-            {
-                listaDesplegable.Items.Add(lectorArchivo.ReadLine());
-            }
-        }
+        //}
+
+        //private void ValidarCodigo()
+        //{
+        //    string linea = "";
+        //    int codigoAvalidar = 0;
+
+        //    StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
+
+        //    while (lectorArchivo.EndOfStream == false)
+        //    {
+        //        linea = lectorArchivo.ReadLine();
+
+        //        codigoAvalidar = Convert.ToInt32(linea.Split(',')[0]);
+
+        //        if (codigoAvalidar == codigo)
+        //        {
+        //            //decirle que el còdigo està repetido
+        //            MessageBox.Show("El codigo esta repetido");
+        //        }
+
+        //    }
+        //}
+
+        //public void ListarEspecialidad()
+        //{
+        //    StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
+        //    while (lectorArchivo.EndOfStream == false)
+        //    {
+        //        lectorArchivo.ReadLine();
+        //    }
+        //}
+
+        //public void ListarEspecialidad(ComboBox listaDesplegable)
+        //{
+        //    StreamReader lectorArchivo = new StreamReader("Especialidad.txt");
+        //    while (lectorArchivo.EndOfStream == false)
+        //    {
+        //        listaDesplegable.Items.Add(lectorArchivo.ReadLine());
+        //    }
+        //}
 
     }
 }

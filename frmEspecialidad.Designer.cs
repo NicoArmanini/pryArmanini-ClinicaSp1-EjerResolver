@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEspecialidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Especialidad";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

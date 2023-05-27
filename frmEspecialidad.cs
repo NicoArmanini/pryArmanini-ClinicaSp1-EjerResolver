@@ -12,18 +12,64 @@ namespace pryArmanini_ClinicaSp1_EjerResolver
 {
     public partial class frmEspecialidad : Form
     {
-        public frmEspecialidad()
+        private string NombreArchivoEsp;
+
+        public frmEspecialidad(string NombreArchivo)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            NombreArchivoEsp = NombreArchivo;
+        }
+
+        private clsEspecialidad CrearEspecialidad()
+        {
+            clsEspecialidad NuevaEspecialidad = new clsEspecialidad();
+
+            NuevaEspecialidad.Nombre = txtNombre.Text;
+            NuevaEspecialidad.NumeroID = txtCodigo.Text;
+
+            return NuevaEspecialidad;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            clsEspecialidad obEspecialidad = new clsEspecialidad();
+            if (ValidarDatos())
+            {
+                clsEspecialidad NuevaEspecialidad = ();
+                clsArchivo Especialidad = new clsArchivo();
+                Especialidad.NombreArchivo = NombreArchivoEsp;
+                Especialidad.GrabarEspecialidad(NuevaEspecialidad);
 
-            obEspecialidad.RegistrarEspecialidad(int.Parse(txtCodigo.Text), txtNombre.Text);
+                txtNombre.Text = "";
+                txtCodigo.Text = "";
+                MessageBox.Show("¡Registro exitoso!", "Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Datos erróneos. Vuelve a intentarlo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
+        }
+
+        private bool ValidarDatos()
+        {
+            bool resultado = false;
+            if (txtNombre.Text != "")
+            {
+                if (txtCodigo.Text != "")
+                {
+                    clsArchivo Especialidad = new clsArchivo();
+                    Especialidad.NombreArchivo = NombreArchivoEsp;
+                    if (Especialidad.BuscarNumeroEspecialidad(txtCodigo.Text) == false)
+                    {
+                        if (Especialidad.BuscarNombreEspecialidad(txtNombre.Text) == false)
+                        {
+                            resultado = true;
+                        }
+                    }
+                }
+            }
+            return resultado;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

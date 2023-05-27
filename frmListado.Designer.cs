@@ -48,7 +48,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(678, 341);
+            this.btnSalir.Location = new System.Drawing.Point(480, 380);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 34);
@@ -178,7 +178,7 @@
             // 
             // btnRegistroMedico
             // 
-            this.btnRegistroMedico.Location = new System.Drawing.Point(643, 103);
+            this.btnRegistroMedico.Location = new System.Drawing.Point(189, 371);
             this.btnRegistroMedico.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroMedico.Name = "btnRegistroMedico";
             this.btnRegistroMedico.Size = new System.Drawing.Size(135, 43);
@@ -188,7 +188,7 @@
             // 
             // btnRegistroEspecialidad
             // 
-            this.btnRegistroEspecialidad.Location = new System.Drawing.Point(643, 38);
+            this.btnRegistroEspecialidad.Location = new System.Drawing.Point(28, 371);
             this.btnRegistroEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroEspecialidad.Name = "btnRegistroEspecialidad";
             this.btnRegistroEspecialidad.Size = new System.Drawing.Size(135, 43);
@@ -201,12 +201,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(800, 393);
+            this.ClientSize = new System.Drawing.Size(632, 445);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.mrcConsulta);
             this.Controls.Add(this.btnRegistroMedico);
             this.Controls.Add(this.btnRegistroEspecialidad);
             this.Name = "frmListado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Medico por Especialidad";
             this.mrcConsulta.ResumeLayout(false);
             this.mrcConsulta.PerformLayout();

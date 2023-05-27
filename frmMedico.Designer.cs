@@ -142,6 +142,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMedico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Medico";
             this.Load += new System.EventHandler(this.frmMedico_Load);
             this.groupBox1.ResumeLayout(false);
